@@ -1,0 +1,23 @@
+sequenceDiagram
+    Note right of Browser: User creates a new note by clicking the Save button
+
+    Browser->>Server: POST https://fullstack-exampleapp.herokuapp.com/new_note
+    Activate Server
+    Server-->>Browser: URL redirect 
+    Deactivate Server
+    Browser->>Server: GET https://fullstack-exampleapp.herokuapp.com/notes
+    Activate Server
+    Server-->>Browser: Notes page is reloaded
+    Deactivate Server
+    Browser->>Server: GET https://fullstack-exampleapp.herokuapp.com/main.css
+    Activate Server
+    Server-->>Browser: the css file
+    Deactivate Server
+    Browser->>Server: GET https://fullstack-exampleapp.herokuapp.com/main.js
+    Activate Server
+    Server-->>Browser: the JavaScript file
+    Deactivate Server
+    Browser->>Server: GET https://fullstack-exampleapp.herokuapp.com/data.json
+    Activate Server
+    Server-->>Browser: raw data of the notes
+    Deactivate Server
